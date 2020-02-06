@@ -12,10 +12,10 @@ const ProfileSchema = new mongoose.Schema({
         type: String
     },
     location: {
-        type: string
+        type: String
     },
     status: {
-        type: string,
+        type: String,
         required: true
     },
     skills: {
@@ -26,7 +26,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String
     },
     githubUserName: {
-        type: string
+        type: String
     },
     experience: [
         {
