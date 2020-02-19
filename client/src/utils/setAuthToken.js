@@ -1,4 +1,4 @@
-import axis from 'axios';
+import axios from 'axios';
 
 const setAuthToken = token => {
     if(token) {
