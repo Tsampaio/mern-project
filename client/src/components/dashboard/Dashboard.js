@@ -2,6 +2,7 @@ import React, { useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import  DashboardActions  from './DashboardActions';
 import { getCurrentProfile } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 
@@ -16,7 +17,7 @@ function Dashboard({getCurrentProfile, auth: { user }, profile: { profile, loadi
             <h1 className="large text-primary">Dashboard</h1>
             <p className="lead">
                 <i className="fas fa-user"/> Welcome { user && user.name}</p>
-            {profile !== null ? <Fragment>has</Fragment> : (
+            {profile !== null ? <Fragment><DashboardActions /></Fragment> : (
                 <Fragment>
                     <p>You have not setup your profile yet</p>
                     <Link to="/create-profile" className="btn btn-primary my-1">Create Profile</Link>
